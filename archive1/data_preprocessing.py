@@ -1,6 +1,11 @@
+import os
+import subprocess
+
+# Check if the pickle file exists. If not, run the preprocessing script.
+if not os.path.exists("model.pkl"):
+    subprocess.run(["python", "data_preprocessing.py"])
 import pandas as pd
 import ast
-import os
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
