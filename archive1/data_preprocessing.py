@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Check if the pickle file exists. If not, run the preprocessing script.
-if not os.path.exists("model.pkl"):
+if not os.path.exists("similarity.pkl"):
     subprocess.run(["python", "data_preprocessing.py"])
 import pandas as pd
 import ast
